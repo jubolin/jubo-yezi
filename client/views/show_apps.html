@@ -1,0 +1,32 @@
+<template name="showApps">
+    {{#if showApp}}
+    <div class="container">
+        <div class="applications">
+            {{#each applications}}
+                {{> showOneApp}}
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+
+    {{#if showSetting}}
+        {{> setting}}
+    {{/if}}
+
+    {{#if showTerminal}}
+        {{> terminal}}
+    {{/if}}
+
+</template>
+
+<template name="showOneApp">
+    <div class="col-xs-4 col-sm-2"> 
+        <div class="center text-center">
+          <a href="#" id="goto-{{name}}">
+              <img src="/images/logos/{{name}}.jpg" class="img-responsive img-thumbnail" alt="Responsive image">
+            </a>
+            <p><strong>{{alias}}</strong></p>
+        </div>
+    </div>
+</template>
+

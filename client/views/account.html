@@ -1,0 +1,107 @@
+<template name='createAccountForm'>
+    <header>
+        <h5>Create Account</h5>
+        <button class='close'>×</button>
+    </header>
+    <div class='panel-body'>
+        <div class='form-wrapper'>
+            <div class='intro-form-wrapper'>
+                <form id='register-form' class='intro-form'>
+                <input type='username' id='account-username' class='large wide' placeholder='Username'/>
+                <input type='password' id='account-password' class='large wide' placeholder='Password'/>
+                <input type='submit' id='create-account' class='btn btn-pink large wide' value='Create an Account' />
+                </form>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name='recoveryPasswordForm'>
+<div class="panel panel-default panel-login">
+    <div class="panel-heading">忘记密码</div>
+    <div class='panel-body'>
+        <form id="new-password">
+            <div class="form-group">
+                <label>新密码</label>
+                <input type="text" id="new-password" class="form-control" autofocus value="">
+            </div>
+            <div class="form-group">
+                <input type='submit' class='btn btn-pink large wide' value='修改密码' />
+            </div>
+        </form>
+    </div>
+</div>
+</template>
+
+<template name='loginForm'>
+<div class="container">
+{{#if login}}
+<div class="panel panel-default panel-login">
+    <div class="panel-heading">登录</div>
+      <div class="panel-body">
+        <form class="form-signin" id="login-form">
+            <div class="form-group">
+                <div>
+                    <label>用户名</label>
+                    <input type="text" name="username" id="login-username" class="form-control" autofocus palceholder="jubo" value="jubo" disabled>
+                    <span class="help-block"></span>
+                </div>
+            </div>
+             <div class="form-group">
+                <div>
+                    <label>密码<a href='#' id='forgot-password'>(忘记密码)</a></label>
+                    <input type="password" name="password" id="login-password" class="form-control" autofocus palceholder="请输入密码" value="">
+                    <span class="help-block"></span>
+                </div>
+            </div>
+             <div class="form-group">
+                <div>
+                    <input type="submit" class="btn btn-parimary btn-lg btn-block" value="登录">
+                    <a href='#' id='create-account'>create account</a>
+                    <span class="help-block"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+
+{{/if}}
+
+    {{#if recoveryPassword}}
+        {{> recoveryPasswordForm}}
+    {{/if}}
+
+    {{#if createAccount}}
+        {{> createAccountForm}}
+    {{/if}}
+</div>
+</template>
+
+<template name="account">
+<div class="panel panel-default">
+    <div class="panel-heading">修改密码</div>
+    <div class="panel-body  " >
+        <form id="change-password">
+        <div class="form-group col-md-12 nopadding">
+            <p><label>旧密码</label></p>
+            <p><input type="password" class="form-control pull-left" id="old-password"></p>
+        </div>
+
+        <div class="form-group col-md-12 nopadding">
+            <p><label>新密码</label></p>
+            <p><input type="password" class="form-control pull-left" id="new-password"></p>
+        </div>
+
+        <div class="form-group col-md-12 nopadding">
+            <p><label>再次输入新密码</label></p>
+            <p><input type="password" class="form-control pull-left" id="new-password-again"></p>
+        </div>
+
+        <div class="form-group col-md-12 nopadding">
+            <p><button type="submit" class="btn btn-primary" >修改密码</button></p>
+        </div>
+        </form>
+    </div>
+</div>
+</template>
+
