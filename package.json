@@ -1,0 +1,19 @@
+{
+  "name": "jubo-yezi",
+  "version": "0.1.0",
+  "alias": "jubo-yezi",
+  "icon": "",
+  "descriptions": "JuBo的Web管理界面",
+  "apps": [
+    {
+      "name": "setting",
+      "alias": "设置",
+      "icon": "setting.jpg"
+    },
+    {
+      "name": "teminal",
+      "alias": "终端",
+      "icon": "terminal.jpg"
+    }
+  ]
+}
