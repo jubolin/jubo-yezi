@@ -6,7 +6,7 @@
             +"This is a basic terminal, it will run Linux/Unix commands on the server\n"
             +"and will print on the screen the output."
             +"\n\n"
-            +"Notes: Don't support cd command\n"
+            +"Notes: Can't support cd command\n"
             +"       Max output buffer is 200*1024." 
 
   }
